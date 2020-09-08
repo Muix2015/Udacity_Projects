@@ -38,6 +38,13 @@ def clean_data(df):
 
 
 def save_data(df, database_filename):
+    '''
+    input:
+        df: The dataset need to load to database.
+        database_filename: the file name of database.
+    output:
+        None.
+    '''
     engine = create_engine('sqlite:///' + database_filename)
     df.to_sql('FigureEight', engine, index=False) 
 
